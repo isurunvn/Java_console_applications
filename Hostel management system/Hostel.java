@@ -13,8 +13,17 @@ public class Hostel {
         return -1;
     }
 
+    public int searchRoom(int room_number) {
+        for (int i=0; i<tenantsList.size(); i++) {
+            if (tenantsList.get(i).getRoom_number() == room_number) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public boolean addTenant(String tenant_id, String tenant_name, int room_number) {
-        if (searchTenant(tenant_id) == -1) {
+        if (searchTenant(tenant_id) == -1 && searchRoom(room_number) == -1) {
             tenantsList.add(new Tenant(tenant_id, tenant_name, room_number));
             return true;
         } else {

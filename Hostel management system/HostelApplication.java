@@ -10,6 +10,8 @@ public class HostelApplication {
         char choice;
     
         do {
+            System.out.println(" ");
+            System.out.println("**************************************************");
             System.out.println("1. Add a tenant ");
             System.out.println("2. Remove a tenant");
             System.out.println("3. All tenants");
@@ -21,7 +23,7 @@ public class HostelApplication {
             System.out.println("9. Identify Tenants with Missing Payments");  
             System.out.println("0. Exit");
 
-            System.out.println("Please enter your choice: ");
+            System.out.print("Please enter your choice: ");
             choice = scan.next().charAt(0);
 
             switch (choice) {
